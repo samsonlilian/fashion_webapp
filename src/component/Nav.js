@@ -61,26 +61,23 @@ export const Nav = () => {
 							</li>
 						</ul>
 
-						<li className='nav-item'>
-							<a
-								href='#0'
-								className='py-2 d-none d-md-inline-block btn btn-outline-primary'
-								data-toggle='modal'
-								data-target='#exampleModalCenter'
-							>
-								Create account
-							</a>
-						</li>
-						{/* <li className='nav-item'>
-							<a
-								href='#0'
-								className='py-2 d-none d-md-inline-block btn btn-outline-primary'
-								data-toggle='modal'
-								data-target='#exampleModalCenter'
-							>
-								Add new crime
-							</a>
-						</li> */}
+						<a
+							href='#0'
+							className='py-2 d-none d-md-inline-block btn btn-outline-primary'
+							data-toggle='modal'
+							data-target='#exampleModalCenter'
+						>
+							Join
+						</a>
+
+						<a
+							href='#0'
+							className='py-2 d-none d-md-inline-block btn btn-primary mx-2'
+							data-toggle='modal'
+							data-target='#exampleModalCenter'
+						>
+							Login
+						</a>
 					</div>
 				</div>
 			</nav>
