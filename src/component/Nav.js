@@ -27,48 +27,14 @@ export const Nav = () => {
 									Home
 								</a>
 							</li>
-							<li class='nav-item dropdown'>
-								<a
-									class='nav-link dropdown-toggle'
-									href='#'
-									id='navbarDropdown'
-									role='button'
-									data-bs-toggle='dropdown'
-									aria-expanded='false'
-								>
-									Categories
-								</a>
-								<ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
-									<li>
-										<a class='dropdown-item' href='#'>
-											Action
-										</a>
-									</li>
-									<li>
-										<a class='dropdown-item' href='#'>
-											Another action
-										</a>
-									</li>
-									<li>
-										<hr class='dropdown-divider' />
-									</li>
-									<li>
-										<a class='dropdown-item' href='#'>
-											Something else here
-										</a>
-									</li>
-								</ul>
-							</li>
 						</ul>
 
-						<a
-							href='#0'
+						<Link
+							to='/sign-up'
 							className='py-2 d-none d-md-inline-block btn btn-outline-primary'
-							data-toggle='modal'
-							data-target='#exampleModalCenter'
 						>
 							Join
-						</a>
+						</Link>
 
 						<a
 							href='#0'

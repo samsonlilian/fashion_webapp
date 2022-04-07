@@ -24,7 +24,7 @@ export const FashionDetail = () => {
 						<span className='text-primary px-1'>bridal shower</span>
 					</p>
 					<div>
-						<Link to='#0' className='text-muted'>
+						<Link to='/' className='text-muted'>
 							go back
 						</Link>
 						<Link to='#0' className='btn btn-outline-primary mx-4'>

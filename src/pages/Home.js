@@ -32,7 +32,7 @@ export const Home = () => {
 									<input
 										type='text'
 										className=' py-2 '
-										placeholder='enter the event you are going to'
+										placeholder='enter the event you are going to: eg funeral, birthday'
 										style={{
 											borderLeft: '0px',
 											borderRight: '0px',
@@ -50,16 +50,22 @@ export const Home = () => {
 										<div className='col'>
 											<select className='form-select'>
 												<option>select gender</option>
+												<option>male</option>
+												<option>female</option>
 											</select>
 										</div>
 										<div className='col'>
 											<select className='form-select'>
 												<option> select your age range</option>
+												<option> less than 50</option>
+												<option> greater than 50</option>
 											</select>
 										</div>
 										<div className='col'>
 											<select className='form-select rounded'>
 												<option>type of wears</option>
+												<option>english</option>
+												<option>native</option>
 											</select>
 										</div>
 									</div>
