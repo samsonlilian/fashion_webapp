@@ -4,7 +4,7 @@ import { LoadingBtn } from '../../component/LoadingBtn'
 
 import { postReq, remote_url, token } from '../../config/request'
 
-export const SignUp = () => {
+export const SignIn = () => {
 	const [formInputs, setFormInputs] = useState({})
 	const [isLoading, setIsLoading] = useState(false)
 	const [success, setSuccess] = useState(false)
@@ -24,12 +24,14 @@ export const SignUp = () => {
 		const data = {
 			email: formInputs.email,
 			password: formInputs.password,
-			name: formInputs.fullname,
 		}
-		const response = await postReq(`${remote_url}register`, data)
+		const response = await postReq(`${remote_url}login`, data)
 		if (response.status === 'success') {
 			setIsLoading(false)
 			setSuccess(true)
+			//store token
+			localStorage.setItem('token', response.data.api_token)
+			window.location.href = '/'
 		} else {
 			setIsLoading(false)
 		}
@@ -44,31 +46,18 @@ export const SignUp = () => {
 					<div className=''>
 						<form onSubmit={createNewAccount}>
 							<div className='pt-5'>
-								<h5 className='text-center'>
-									Already have an account? <Link to='/sign-in'>Login</Link>
-								</h5>
+								<h6 className='text-center'>
+									Dont have an account? <Link to='/sign-up'>Sign up</Link>
+								</h6>
 								<h4 className='text-center'>Join 12 million others</h4>
 								<p className='text-center'>
 									Lorem ipsum dolor sit amet consectetur adipisicing.
 								</p>
 							</div>
 
-							{success && (
-								<p className='alert alert-success'>Acount created Successfully</p>
-							)}
+							{success && <p className='alert alert-success'>Login Successfully</p>}
 							{/*  */}
 							<div className='px-5'>
-								<div className='row px-5 py-3'>
-									<input
-										type='text'
-										name='fullname'
-										required
-										onChange={handleInputChange}
-										value={formInputs.fullname}
-										className='form-control py-2'
-										placeholder='fullname'
-									/>
-								</div>
 								{/*  */}
 								<div className='row px-5 py-3'>
 									<input

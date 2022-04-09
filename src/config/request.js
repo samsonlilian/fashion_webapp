@@ -1,17 +1,18 @@
 import axios from 'axios'
 
 export const token = localStorage.getItem('token')
-export const remote_url = ''
+export const remote_url = 'http://127.0.0.1:8000/api/'
+
 export const getToken = () => {
 	//
-	console.log(`herr: ${localStorage.getItem('token')}`)
+
 	return localStorage.getItem('token')
 }
 
 export const destroyToken = () => {
 	//
-	localStorage.removeItem('api_token')
-	localStorage.removeItem('fullname')
+	localStorage.removeItem('token')
+	// localStorage.removeItem('fullname')
 }
 //
 

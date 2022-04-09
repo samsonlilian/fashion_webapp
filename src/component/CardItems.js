@@ -1,18 +1,19 @@
 import React from 'react'
-import { data } from '../config/sampleData'
+
 import { CardItem } from './CardItem'
 
-export const CardItems = () => {
+export const CardItems = ({ items }) => {
 	return (
 		<>
 			<div className='row  px-3 py-4'>
 				{/*  */}
-				{data.map((fashion) => (
-					<div className='col-3'>
+				{items.map((fashion, i = 0) => (
+					<div className='col-3 px-2 py-3' key={i}>
 						<CardItem
+							id={fashion.id}
 							title={fashion.title}
 							desc={fashion.desc}
-							imgUrl={fashion.img}
+							imgUrl={fashion.cover_img}
 						/>
 					</div>
 				))}
