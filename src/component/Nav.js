@@ -4,6 +4,8 @@ import { token, destroyToken } from '../config/request'
 
 export const Nav = () => {
 	let navigate = useNavigate()
+
+	//
 	const logout = () => {
 		destroyToken()
 		return navigate('/sign-in')

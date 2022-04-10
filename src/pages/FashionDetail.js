@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Nav } from '../component'
 import { LoadingBtn } from '../component/LoadingBtn'
-import { getReq, remote_url, postReq } from '../config/request'
+import { getReq, remote_url, postReq, token } from '../config/request'
 import { singleData } from '../config/sampleData'
 
 export const FashionDetail = () => {
@@ -70,13 +70,15 @@ export const FashionDetail = () => {
 								ordered
 							</Link>
 						) : (
-							<Link
-								to='#0'
-								className='btn btn-outline-primary mx-4'
-								onClick={() => makeOrder()}
-							>
-								order now
-							</Link>
+							token && (
+								<Link
+									to='#0'
+									className='btn btn-outline-primary mx-4'
+									onClick={() => makeOrder()}
+								>
+									order now
+								</Link>
+							)
 						)}
 						{/*  */}
 					</div>
